@@ -4,9 +4,6 @@ def minWindow(s, t):
     
     answer = s
     for length in range(len(s)-1, 0, -1):
-        # if length == 4:
-        #     debug = 'here'
-
         for subLength in range(len(s) - length + 1):
             candidate = s[subLength:length+subLength:]
             if containsAll(candidate, t):
